@@ -12,6 +12,10 @@ const corsOptions = {
 
 console.log("Hello world")
 
+app.get('/',(req,res)=>{
+    res.status(200).send("hello!!")
+})
+
 connectToMongo();
 app.use(cors(corsOptions))
 app.use(express.json())
@@ -20,9 +24,6 @@ app.use(express.json())
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/notes',require('./routes/notes'))
 
-app.get('/',(req,res)=>{
-    res.send("hello!!")
-})
 
 app.listen(port,()=>{
     console.log("Listening to port at 5000");
