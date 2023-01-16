@@ -15,3 +15,5 @@ app.use('/api/notes',require('./routes/notes'))
 app.listen(port,()=>{
     console.log("Listening to port at 5000");
 })
+
+module.exports = app;
