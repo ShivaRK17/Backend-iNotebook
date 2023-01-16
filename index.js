@@ -4,10 +4,16 @@ const app = express();
 const port = 5000;
 const cors = require('cors')
 
+const corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200,
+    credentials: true
+}
+
 console.log("Hello world")
 
 connectToMongo();
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.json())
 
 //Available Routes
