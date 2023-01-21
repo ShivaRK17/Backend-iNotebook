@@ -10,8 +10,6 @@ const corsOptions = {
     credentials: true
 }
 
-console.log("Hello world")
-
 app.get('/',(req,res)=>{
     res.status(200).send("hello!!")
 })
